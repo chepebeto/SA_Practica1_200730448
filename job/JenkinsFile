@@ -1,0 +1,31 @@
+import groovy.json.JsonSlurperClassic
+
+def jsonParse(def json) {
+    new groovy.json.JsonSlurperClassic().parseText(json)
+}
+
+pipeline {
+  agent any
+  environment {
+    appName = "variable" 
+  }
+stages {
+        stage('Compilar') {
+            steps {
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+        stage('Testear') {
+            steps {
+                sh 'npm test'
+            }
+        }
+        stage('Desplegar') {
+            steps {
+                sh 'sudo rm -rf /var/www/html/sa_practica1_200730448'
+                sh 'sudo cp -r ${WORKSPACE}/build/ /var/www/html/sa_practica1_200730448/'
+            }
+        }
+    }
+} 
