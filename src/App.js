@@ -9,9 +9,11 @@ function App() {
           <a href="#">
             Hola Software 
           </a>
+
         </nav>
-        
+        learn react
         <img src={logo} className="App-logo" alt="logo" />     
+        
       
     </div>
   );
