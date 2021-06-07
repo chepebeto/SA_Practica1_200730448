@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">   
         <nav className ="navbar navbar-dark bg-dark">
-          <h1>Hola Software </h1>
+          <p color="white">Hola Software </p>
             
           
 
