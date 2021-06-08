@@ -1,22 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">   
-        <nav className ="navbar navbar-dark bg-dark">
-          <p color="white">Hola Software </p>
-            
-          
-
-        </nav>
-        
-        <img src={logo} className="App-logo" alt="logo" />     
-        
-      
+    <div className="App">           
+          <h1> Hola Software </h1>
+          <h2> Practica 1</h2>
+          <h5> José Alberto Velásquez Orozco - 200730448</h5>
     </div>
   );
 }
 
 export default App;
+
