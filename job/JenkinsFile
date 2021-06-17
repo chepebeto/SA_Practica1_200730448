@@ -25,6 +25,7 @@ stages {
             steps {
                 sh 'sudo apt-get update'
                 sh 'sudo apt-get upgrade'
+                sh 'sudo apt-get install python-setuptools'                
                 sh 'pip3 install fabric'                
                 sh 'python3 ${WORKSPACE}/fabric/frontend.py'
             }
