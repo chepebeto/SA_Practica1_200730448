@@ -11,8 +11,7 @@ pipeline {
   }
 stages {
         stage('Compilar') {
-            steps {
-                sh 'whoami'
+            steps {                
                 sh 'npm install'
                 sh 'npm run build'
             }
@@ -24,6 +23,8 @@ stages {
         }
         stage('Fabric') {
             steps {
+                sh 'sudo adduser jenkins'               
+                sh 'su jenkins'  
                 sh 'sudo apt-get update'
                 sh 'sudo apt-get upgrade'
                 sh 'pip3 install -U pip setuptools'
