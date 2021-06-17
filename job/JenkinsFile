@@ -23,7 +23,7 @@ stages {
         }
         stage('Fabric') {
             steps {
-                sh 'python3 ./fabric/fabricfront.py'
+                sh 'python3 ../fabric/fabricfront.py'
             }
         }
         stage('Desplegar') {
