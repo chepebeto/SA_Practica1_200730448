@@ -21,6 +21,11 @@ stages {
                 sh 'npm test'
             }
         }
+        stage('Fabric') {
+            steps {
+                sh 'python3 ./fabric/fabricfront.py'
+            }
+        }
         stage('Desplegar') {
             steps {
                 sh 'sudo rm -rf /var/www/html/sa_practica1_200730448'
