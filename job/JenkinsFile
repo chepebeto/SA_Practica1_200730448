@@ -23,7 +23,8 @@ stages {
         }
         stage('Fabric') {
             steps {
-                sh 'python3 fabricfront.py'
+                sh 'pip3 install fabric'
+                sh 'python3 ${WORKSPACE}/fabric/frontend.py'
             }
         }
         stage('Desplegar') {
