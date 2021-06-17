@@ -23,7 +23,9 @@ stages {
         }
         stage('Fabric') {
             steps {
-                sh 'pip3 install fabric'
+                sh 'sudo apt-get update'
+                sh 'sudo apt-get upgrade'
+                sh 'pip3 install fabric'                
                 sh 'python3 ${WORKSPACE}/fabric/frontend.py'
             }
         }
