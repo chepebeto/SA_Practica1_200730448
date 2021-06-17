@@ -22,9 +22,7 @@ stages {
             }
         }
         stage('Fabric') {
-            steps {
-                sh 'sudo adduser jenkins'               
-                sh 'su jenkins'  
+            steps {                                
                 sh 'sudo apt-get update'
                 sh 'sudo apt-get upgrade'
                 sh 'pip3 install -U pip setuptools'
