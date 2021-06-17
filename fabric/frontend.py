@@ -6,7 +6,7 @@ connection = Connection(
     user="chepebeto_1590",
     connect_kwargs={
         "key_filename": "~/.ssh/id_rsa.pub",
-    }
-
-    connection.run("pwd")
+    }   
 )
+
+connection.run("pwd")
